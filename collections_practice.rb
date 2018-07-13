@@ -32,9 +32,8 @@ def remove_non_strings(array)
 end    
 
 def count_elements(array)
-    array.uniq.collect do |element|
-      binding.pry
-    element[:count] = array.count(item)
-    item
+    array.uniq.map do |element|
+    element[:count] = array.count(element)
+    element
     end 
 end  
