@@ -65,6 +65,14 @@ end
 end 
 end
 
-def organize_schools (hash)
-  binding.pry
-end  
+def organize_schools (school_hash)
+  new_location_hash = {}
+  school_hash.each do |container|
+  container.each do |school, location_hash|
+    location_hash.each do |location,location_value|
+      new_location_hash[location_value] = "#{school}"
+     end
+   end
+ end
+ new_location_hash.uniq
+end 
