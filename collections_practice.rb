@@ -67,12 +67,18 @@ end
 
 def organize_schools (school_hash)
   new_location_hash = {}
-  location_array = []
+  ny_array = []
+  sf_array = []
   school_hash.each do |school_name, location_hash|
     location_hash.each do |location,location_value|
-      if school_hash[school_name][location] == location_value
-      location_array << school_name
-      new_location_hash[location_value] = location_array
+      if school_hash[school_name][location] == "NYC"
+      ny_array << school_name
+      new_location_hash[location_value] = ny_array
+      elsif school_hash[school_name][location] == "SF"
+      sf_array << school_name
+      new_location_hash[location_value] = sf_array
+      else 
+      new_location_hash[location_value] = school_name  
       end
     end
   end
