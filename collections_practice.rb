@@ -78,7 +78,7 @@ def organize_schools (school_hash)
       sf_array << school_name
       new_location_hash[location_value] = sf_array
       else 
-      new_location_hash[location_value] = school_name  
+      new_location_hash[location_value] = [school_name]  
       end
     end
   end
