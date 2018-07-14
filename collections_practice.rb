@@ -66,15 +66,15 @@ end
 end
 
 def organize_schools (school_hash)
-  binding.pry
   new_location_hash = {}
   location_array = []
   school_hash.each do |school_name, location_hash|
     location_hash.each do |location,location_value|
-    if school_name.values == location_value
+      if school_name.values == location_value
       location_array << school_name
-    new_location_hash[location_value] = location_array
-     end
-   end
+      new_location_hash[location_value] = location_array
+      end
+    end
+  end
  new_location_hash
 end 
