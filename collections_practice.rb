@@ -43,15 +43,22 @@ def merge_data(keys, data)
   keys.each do |keys_hash|
   keys_hash.each do |kname, name_value|
   data.each do |data_hash|
-  data_hash.each do |dname, name_hash| 
-       binding.pry
+  data_hash.each do |dname, name_hash|
       if name_value == dname
-        name_hash[dname][kname] = [name_value]
+        name_hash[kname] = name_value
         merged_data << name_hash
-        merged_data 
-      end
     end
   end
 end
 end
+end
+        merged_data 
 end 
+
+def find_cool (hashes)
+  hashes each do |k,v|
+    binding.pry
+  if hash == "cool"
+  return hash
+end
+end   
