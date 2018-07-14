@@ -57,11 +57,10 @@ end
 
 def find_cool (hashes)
   hashes.each do |hash|
-    hash.each do |key, value|
-      if value == "cool"
-      return [key => value]
+    hash.each do |name_temp, name_temp_value|
+      if value == "cool" 
+      return {hash[:name] => value}
       end
-    binding.pry
 end
 end 
 end
