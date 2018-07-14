@@ -71,6 +71,7 @@ def organize_schools (school_hash)
     location_hash.each do |location,location_value|
     new_location_hash[location_value] = [school_name]
      end
+     binding.pry
    end
    end
  new_location_hash
