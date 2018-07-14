@@ -58,8 +58,8 @@ end
 def find_cool (hashes)
   hashes.each do |hash|
     hash.each do |name_temp, name_temp_value|
-      if value == "cool" 
-      return {hash[:name] => value}
+      if name_temp_value == "cool" 
+      return {hash[:name] => name_temp_value}
       end
 end
 end 
