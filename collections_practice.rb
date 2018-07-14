@@ -59,7 +59,7 @@ def find_cool (hashes)
   hashes.each do |hash|
     hash.each do |name_temp, name_temp_value|
       if name_temp_value == "cool" 
-      return hash
+      return [hash]
       end
 end
 end 
