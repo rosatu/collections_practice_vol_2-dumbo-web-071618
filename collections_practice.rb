@@ -57,9 +57,30 @@ end
 
 def find_cool (hashes)
   hashes.each do |hash|
-    hash.each do |key, value|
-      if value == "cool"
-        return [key : value]
-    binding.pry
+    hash.each do |name_temp, name_temp_value|
+      if name_temp_value == "cool" 
+      return [hash]
+      end
 end
-end   
+end 
+end
+
+def organize_schools (school_hash)
+  new_location_hash = {}
+  ny_array = []
+  sf_array = []
+  school_hash.each do |school_name, location_hash|
+    location_hash.each do |location,location_value|
+      if school_hash[school_name][location] == "NYC"
+      ny_array << school_name
+      new_location_hash[location_value] = ny_array
+      elsif school_hash[school_name][location] == "SF"
+      sf_array << school_name
+      new_location_hash[location_value] = sf_array
+      else 
+      new_location_hash[location_value] = [school_name]  
+      end
+    end
+  end
+ new_location_hash
+end 
