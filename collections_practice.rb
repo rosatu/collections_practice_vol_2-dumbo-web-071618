@@ -37,3 +37,21 @@ def count_elements(array)
     element
     end 
 end  
+
+def merge_data(keys, data)
+  merged_data = []     
+  keys.each do |keys_hash|
+  keys_hash.each do |kname, name_value|
+  data.each do |data_hash|
+  data_hash.each do |dname, name_hash| 
+       binding.pry
+      if name_value == dname
+        name_hash[dname][kname] = [name_value]
+        merged_data << name_hash
+        merged_data 
+      end
+    end
+  end
+end
+end
+end 
