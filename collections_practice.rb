@@ -72,7 +72,6 @@ def organize_schools (school_hash)
     new_location_hash[location_value] = [school_name]
      end
    end
-   end
    binding.pry
  new_location_hash
 end 
