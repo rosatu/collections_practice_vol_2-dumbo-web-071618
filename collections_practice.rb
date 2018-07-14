@@ -72,5 +72,5 @@ def organize_schools (school_hash)
       new_location_hash[location_value] = "#{school_name}"
      end
    end
- new_location_hash.uniq
+ new_location_hash
 end 
